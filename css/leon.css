@@ -1,11 +1,12 @@
+/*start global rules*/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.parent {
-  background-color: #eee;
+body {
+  font-family: "Work Sans", sans-serif;
 }
 
 .container {
@@ -15,7 +16,6 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-
 
 /*small screen*/
 @media (max-width: 768px) {
@@ -37,3 +37,86 @@
     width: 1170px;
   }
 }
+
+/*end global rules*/
+
+/*start header*/
+.header {
+  padding: 20px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  width: 60px;
+}
+
+.header .links {
+  position: relative;
+}
+
+.header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.3s;
+}
+
+.header .links .icon span {
+  /* background-color: #333; */
+  margin-bottom: 5px;
+}
+
+.icon .fas {
+  width: 100%;
+  text-align: center;
+}
+
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  transition: 0.3s;
+}
+.header .links ul::before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+
+.header .links a {
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.header .links a:hover {
+  padding-left: 25px;
+  background-color: #ddd;
+}
+
+.header .links li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+
+.header .links:hover ul {
+  display: block;
+}
+
+/*end header*/
