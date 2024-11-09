@@ -1,46 +1,49 @@
-/*start global rules*/
+/* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+/* End Variables */
+/* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Work Sans", sans-serif;
 }
-
 .container {
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-/*small screen*/
-@media (max-width: 768px) {
+/* Small */
+@media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
-
-/*medium screen*/
-@media (max-width: 992px) {
+/* Medium */
+@media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
-
-/*large screen*/
-@media (max-width: 1200px) {
+/* Large */
+@media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
-
-/*end global rules*/
-
-/*start header*/
+/* End Global Rules */ /*start header*/
 .header {
   padding: 20px;
 }
@@ -60,20 +63,19 @@ body {
 }
 
 .header .links .icon {
-  width: 30px;
   display: flex;
-  flex-wrap: wrap;
-  transition: 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .links .icon .fas {
+  font-size: 24px;
+  color: #333;
 }
 
 .header .links .icon span {
   /* background-color: #333; */
   margin-bottom: 5px;
-}
-
-.icon .fas {
-  width: 100%;
-  text-align: center;
 }
 
 .header .links ul {
@@ -87,6 +89,7 @@ body {
   top: calc(100% + 15px);
   display: none;
   transition: 0.3s;
+  z-index: 1;
 }
 .header .links ul::before {
   content: "";
@@ -120,3 +123,64 @@ body {
 }
 
 /*end header*/
+
+/* landing section */
+.landing {
+  background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+}
+
+.landing .intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 100%;
+}
+.landing .intro-text h1 {
+  margin: 0;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 50px;
+}
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+/* end landing section */
+
+/* start features */
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-gap: 20px; */
+}
+
+.features .feat {
+  padding: 20px;
+  text-align: center;
+}
+.features .feat i {
+  color: var(--main-color);
+}
+.features .feat h3 {
+  font-weight: 800;
+  margin: 30px 0;
+}
+.features .feat p {
+  line-height: 1.8;
+  color: #777;
+  font-size: 17px;
+}
+/* end features */
