@@ -43,7 +43,34 @@ body {
     width: 1170px;
   }
 }
-/* End Global Rules */ /*start header*/
+/* End Global Rules */
+
+/* start components */
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+.special-heading + p {
+  margin: -30px 0 0;
+  text-align: center;
+  color: #797979;
+}
+@media(max-width: 767px){
+  .special-heading{
+    font-size: 60px;
+  }
+  .special-heading + p{
+    margin-top: -20px;
+  }
+}
+/* end components */
+
+/*start header*/
 .header {
   padding: 20px;
 }
