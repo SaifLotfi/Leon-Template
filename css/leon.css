@@ -267,3 +267,33 @@ body {
   }
 }
 /* end services */
+
+/* start portfolio */
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-top: 80px;
+}
+.portfolio-content .card img {
+  max-width: 100%;
+}
+.portfolio .portfolio-content .info {
+ padding: 20px;
+}
+
+.portfolio .portfolio-content  h3{
+  margin:0;
+}
+
+.portfolio .portfolio-content  p{
+  color: #777;
+}
+/* end portfolio */
+
