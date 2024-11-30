@@ -80,7 +80,7 @@
 
   <!-- start services section -->
 
-  <div class="services">
+  <div class="services" id="services">
     <div class="container">
       <h2 class="special-heading">services</h2>
       <p>Don't be busy, be productive</p>
@@ -224,6 +224,19 @@
     </div>
   </div>
   <!-- end contact section -->
+  <!-- start Footer section -->
+  <div class='footer'>
+    &copy;
+    <span id='current-year'></span>
+    <span>Leon</span>
+    all rights reservered
+  </div>
+  <!-- end Footer section -->
+
+  <script>
+    // Set the current year dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>
